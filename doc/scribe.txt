@@ -1,0 +1,24 @@
+================================================================================
+                                                                      *scribe*
+
+This plugin allows you to take fast markdown notes with easy access
+in floating window.
+
+
+                                                               *scribe.open()*
+scribe.open()
+
+    Open notes window.
+
+                                                               *scribe.close()
+scribe.close()
+
+    Close notes window and autosave.
+
+                                                             *scribe.toggle()*
+scribe.toggle()
+
+    Toggle notes window.
+
+
+ vim:tw=78:ts=8:ft=help:norl:

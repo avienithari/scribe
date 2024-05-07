@@ -1,0 +1,3 @@
+scribe	scribe.txt	/*scribe*
+scribe.open()	scribe.txt	/*scribe.open()*
+scribe.toggle()	scribe.txt	/*scribe.toggle()*
