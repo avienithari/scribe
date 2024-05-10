@@ -4,10 +4,16 @@ local M = {}
 M.win = nil
 M.buf = nil
 
-local function create()
-    if M.buf == nil then
-        M.buf = vim.api.nvim_create_buf(true, false)
+local function get_or_create_buffer(filename)
+    local buf_exists = vim.fn.bufexists(filename) ~= 0
+    if buf_exists then
+        return vim.fn.bufnr(filename)
     end
+    return vim.fn.bufadd(filename)
+end
+
+local function create()
+    M.buf = get_or_create_buffer(file)
     local window_height = vim.api.nvim_list_uis()[1].height
     local window_width = vim.api.nvim_list_uis()[1].width
     M.win = vim.api.nvim_open_win(M.buf, true, {
@@ -24,6 +30,7 @@ local function create()
     vim.api.nvim_buf_set_name(M.buf, file)
     vim.api.nvim_buf_call(M.buf, vim.cmd.edit)
     vim.api.nvim_buf_set_option(M.buf, "filetype", "markdown")
+    vim.api.nvim_win_set_option(M.win, "wrap", true)
     vim.keymap.set(
         "n",
         "<ESC>",
