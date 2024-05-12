@@ -1,3 +1,6 @@
+ScribeClose	scribe.txt	/*ScribeClose*
+ScribeLine	scribe.txt	/*ScribeLine*
+ScribeOpen	scribe.txt	/*ScribeOpen*
+ScribeRange	scribe.txt	/*ScribeRange*
+ScribeToggle	scribe.txt	/*ScribeToggle*
 scribe	scribe.txt	/*scribe*
-scribe.open()	scribe.txt	/*scribe.open()*
-scribe.toggle()	scribe.txt	/*scribe.toggle()*
