@@ -7,6 +7,7 @@ M.toggle = view.toggle
 M.open = view.open
 M.close = view.close
 M.line = commands.line
+M.range = commands.range
 
 function M.reset()
     M.close()
